@@ -1,4 +1,4 @@
-
+#Anderson Iskowitz
 def count(first, last):
     """
     This function will create a string of numbers separated by a space. The numbers will start with the
@@ -10,7 +10,6 @@ def count(first, last):
     :return: A string containing the numbers
     """
     pass # make sure to delete this line when you write your own function
-
 
 def main():
     print(count(0, 6))
