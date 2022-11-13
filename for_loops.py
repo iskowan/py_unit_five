@@ -1,6 +1,11 @@
 #Anderson Iskowitz
-def count(first, last):
-    """
+def count(first, last, times):
+    test = ""
+    for x in range(first, last, times):
+        test += str(x)+ " "
+    print(test)
+
+"""
     This function will create a string of numbers separated by a space. The numbers will start with the
     first number and end with the second. The second number SHOULD be included as part of the string. If
     the first number is larger than the second, the numbers should count down, rather than up.
@@ -9,11 +14,11 @@ def count(first, last):
     :param second: The final number. Must be included
     :return: A string containing the numbers
     """
-    pass # make sure to delete this line when you write your own function
 
 def main():
-    print(count(0, 6))
+    (count(6, -1, -1))
 
 
 if __name__ == '__main__':
     main()
+
