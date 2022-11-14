@@ -1,11 +1,15 @@
-def get_sum(times):
+def get_sum(y):
     test = ""
-    for x in range(0, 75, times):
-        test += str(x) + " "
+    for x in range(1, 13):
+        test += str(y * x) + " "
     print(test)
 
-get_sum(6)
-get_sum(10)
+def main():
+    num = int(input("What times table would you like to see?:"))
+    get_sum(num)
+
+main()
+
 """
     Will return the sum of all the multiples of 3 or 5 of the given number.
     Ex. get_sum(10) returns 23
@@ -13,5 +17,3 @@ get_sum(10)
     :return: The sum of all the multiples of 3 or 5 up to the number.
 """
 #pass # make sure to delete this line when writing your function
-
-
