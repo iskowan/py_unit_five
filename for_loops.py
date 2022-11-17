@@ -1,7 +1,7 @@
 #Anderson Iskowitz
-def count(first, last, times):
+def count(first, last, step):
     test = ""
-    for x in range(first, last, times):
+    for x in range(first, last, step):
         test += str(x)+ " "
     print(test)
 
