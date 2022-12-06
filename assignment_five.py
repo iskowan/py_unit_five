@@ -1,21 +1,23 @@
 import random
+def get_number():
+    random.randint(1, 100)
 
-def get_stones():
-    random.randint(1, 10)
-
-def get_row1():
-    row1 = get_stones()
-    return row1
-
-def get_row2():
-    row2 = get_stones()
-    return row2
-
-def get_winner():
-    pass
+def guess(number):
+    guess = int(input("What number do you think I am thinking about?: "))
+    count = 0
+    while True:
+        if guess > number:
+            print("Your guess is greater than the number I am thinking about, try again!")
+            count += 1
+        if guess < number:
+            print("Your guess is less than the number I am thinking about, try again!")
+            count += 1
+        if guess == number:
+            break
+    return count
 def main():
-    print("There are two rows, row one has", get_row1(), "stones in it and row two has", get_row2(), "stones in it.")
-    pile = input("Which pile would you like to choose from?:")
-    amount = input("How many stones would you like to remove?:")
+    number = get_number()
+    guess(number)
 
+    print("You took", guess(number),"tries")
 main()

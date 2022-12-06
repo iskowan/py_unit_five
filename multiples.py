@@ -1,3 +1,4 @@
+'''
 def get_sum(number):
     num = 0
     for x in range(number):
@@ -8,9 +9,21 @@ def get_sum(number):
             num_2 = running_num
         num = running_num
     total = num_1 + num_2
-    print(total)
+    print("The mutiples of 3 and 5 total is", total )
 get_sum(5)
+'''
 
+def get_sum(number):
+    sum = 0
+    for x in range(number):
+        print("x is", x)
+        if x % 3 == 0 or x % 5 == 0:
+            print("...adding", x, "to total")
+            sum += x
+            print("Current total is: \033[1m", sum, "\033[0m")
+    print("The sum of the multiples of 3 and 5 are", "\033[1m",sum, "\033[1m")
+
+get_sum(10)
 """
     Will return the sum of all the multiples of 3 or 5 of the given number.
     Ex. get_sum(10) returns 23
