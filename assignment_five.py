@@ -1,65 +1,68 @@
-import random
-import time
-class color:
-   PURPLE = '\033[95m'
-   CYAN = '\033[96m'
-   DARKCYAN = '\033[36m'
-   BLUE = '\033[94m'
-   GREEN = '\033[92m'
-   YELLOW = '\033[93m'
-   RED = '\033[91m'
-   BOLD = '\033[1m'
-   UNDERLINE = '\033[4m'
-   END = '\033[0m'
+import random               # importing random for a random number
+import time                 # importing time for pausing time
+class color:                # creating a class called color
+   GREEN = '\033[92m'       # defining GREEN
+   RED = '\033[91m'         # defining RED
+   BOLD = '\033[1m'         # defining BOLD
+   UNDERLINE = '\033[4m'    # defining UNDERLINE
+   END = '\033[0m'          # defining END
 def get_number():
-    print("Getting number", end = '')
-    time.sleep(1)
-    print(".", end = '')
-    time.sleep(1)
-    print(".", end = '')
-    time.sleep(1)
-    print(".")
-    number = random.randint(1, 100)
-    time.sleep(1)
-    print("Ok! I am thinking about a number")
-    time.sleep(1)
-    return number
+    '''
+    this function gets numbers and outputs them back for the user to guess
+    :return: number returns the number that was randomly picked using random
+    '''
+    print("Getting number", end = '')                   # prints text and places the next line next to it
+    time.sleep(1)                                       # pauses the code for 1 second
+    print(".", end = '')                                # prints "." and places the next line next to it
+    time.sleep(1)                                       # pauses the code for 1 second
+    print(".", end = '')                                # prints "." and places the next line next to it
+    time.sleep(1)                                       # pauses the code for 1 second
+    print(".")                                          # prints "."
+    number = random.randint(1, 100)                     # get a random number between 1 and 100
+    time.sleep(1)                                       # pauses the code for 1 second
+    print("Ok! I am thinking about a number")           # prints text
+    time.sleep(1)                                       # pauses the code for 1 second
+    return number                                       # returns the number chosen in line 26 for another function to use
 def guess():
-    number = get_number()
-    guess = int(input("What number do you think I am thinking about?: "))
-    count = 1
+    '''
+    this function gets the user guesses and lets them know if they are too high or low
+    :return: count returns the tries that it took for the user to guess the number
+    '''
+    number = get_number()                                                                                                                   # calls the function "get_number()"
+    guess = int(input("What number do you think I am thinking about?: "))                                                                   # gets input of the user for their guess
+    count = 1                                                                                                                               # counts the tries that the user takes (counter is 1)
     while True:
-        if guess > number:
-            print("Your guess is", color.BOLD + color.GREEN + "greater" + color.END, "than the number I am thinking about, try again!")
-            count += 1
-            guess  = int(input("What number do you think I am thinking about?: "))
-        if guess < number:
-            print("Your guess is", color.BOLD + color.RED + "less" + color.END,"than the number I am thinking about, try again!")
-            count += 1
-            guess = int(input("What number do you think I am thinking about?: "))
-        if guess == number:
-            print("You guessed the number I was thinking about!")
-            time.sleep(2)
+        if guess > number:                                                                                                                  # if the users guess is greater than the number
+            print("Your guess is", color.BOLD + color.GREEN + "greater" + color.END, "than the number I am thinking about, try again!")     # print the text
+            count += 1                                                                                                                      # add one to the counter
+            guess  = int(input("What number do you think I am thinking about?: "))                                                          # ask the user for another guess (input)
+        if guess < number:                                                                                                                  # if the guess is less than the number
+            print("Your guess is", color.BOLD + color.RED + "less" + color.END,"than the number I am thinking about, try again!")           # print the text
+            count += 1                                                                                                                      # add one to the counter
+            guess = int(input("What number do you think I am thinking about?: "))                                                           # ask the user for another guess (input)
+        if guess == number:                                                                                                                 # if the guess is the same as the number
+            print("You guessed the number I was thinking about!")                                                                           # print text
+            time.sleep(2)                                                                                                                   # pauses time for 2 seconds
             print("My number was:", color.BOLD + str(number) + color.END)
-            time.sleep(2)
+            time.sleep(2)                                                                                                                   # pauses time for 2 seconds
             return count
 
 def main():
     print("Welcome!")
-    time.sleep(1)
-    print("This is a guessing game where I think of a number between 1 and 100")
-    time.sleep(2)
-    print("There are 3 rounds in this game...")
-    time.sleep(1)
-    print("Then I will give you the average amount of tries to took you to guess my number")
-    time.sleep(1)
-    print("You took", color.BOLD + str(guess()) + color.END,"tries to guess my number")
-    time.sleep(1)
-    print("Let's try again...")
-    time.sleep(2)
-    print("You took", color.BOLD + str(guess()) + color.END, "tries to guess my number")
-    time.sleep(1)
-    print("End of round 2")
-    time.sleep(2)
-    print("You took", color.BOLD + str(guess()) + color.END, "tries to guess my number")
+    time.sleep(1)                                                                               # pauses time for 1 seconds
+    print("This is a guessing game where I think of a number between 1 and 100")                # print text
+    time.sleep(2)                                                                               # pauses time for 2 seconds
+    print("There are 3 rounds in this game...")                                                 # print text
+    time.sleep(1)                                                                               # pauses time for 1 seconds
+    print("Then I will give you the average amount of tries to took you to guess my number")    #print text
+    time.sleep(1)                                                                               # pauses time for 1 seconds
+    print("You took", color.BOLD + str(guess()) + color.END,"tries to guess my number")         # print text and call guess()
+    time.sleep(1)                                                                               # pauses time for 1 seconds
+    print("Let's try again...")                                                                 # print text
+    time.sleep(2)                                                                               # pauses time for 2 seconds
+    print("You took", color.BOLD + str(guess()) + color.END, "tries to guess my number")        # print text and call guess()
+    time.sleep(1)                                                                               # pauses time for 1 seconds
+    print("End of round 2")                                                                     # print text
+    time.sleep(2)                                                                               # pauses time for 2 seconds
+    print("You took", color.BOLD + str(guess()) + color.END, "tries to guess my number")        # print text and call guess()
 main()
