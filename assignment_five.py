@@ -11,11 +11,11 @@ def get_number():
     this function gets numbers and outputs them back for the user to guess
     :return: number returns the number that was randomly picked using random
     '''
-    print("Getting number", end = '')                   # prints text and places the next line next to it
+    print("Getting number", end='')                     # prints text and places the next line of text next to it
     time.sleep(1)                                       # pauses the code for 1 second
-    print(".", end = '')                                # prints "." and places the next line next to it
+    print(".", end='')                                  # prints "." and places the next line of text next to it
     time.sleep(1)                                       # pauses the code for 1 second
-    print(".", end = '')                                # prints "." and places the next line next to it
+    print(".", end='')                                  # prints "." and places the next line of text next to it
     time.sleep(1)                                       # pauses the code for 1 second
     print(".")                                          # prints "."
     number = random.randint(1, 100)                     # get a random number between 1 and 100
@@ -52,17 +52,26 @@ def main():
     time.sleep(1)                                                                               # pauses time for 1 seconds
     print("This is a guessing game where I think of a number between 1 and 100")                # print text
     time.sleep(2)                                                                               # pauses time for 2 seconds
-    print("There are 3 rounds in this game...")                                                 # print text
-    time.sleep(1)                                                                               # pauses time for 1 seconds
+    print("There are 3 rounds in this game", end='')                                            # print text amd places the next line of text next to it
+    time.sleep(.5)                                                                              # pauses time for .5 seconds
+    print(".", end='')                                                                          # prints "." and places the next line of text next to it
+    time.sleep(.5)                                                                              # pauses the code for .5 second
+    print(".", end='')                                                                          # prints "." and places the next line of text next to it
+    time.sleep(.5)                                                                              # pauses the code for .5 second
+    print(".")                                                                                  # prints "."
+    time.sleep(2)                                                                               # pauses time for 1 second
     print("Then I will give you the average amount of tries to took you to guess my number")    #print text
-    time.sleep(1)                                                                               # pauses time for 1 seconds
-    print("You took", color.BOLD + str(guess()) + color.END,"tries to guess my number")         # print text and call guess()
+    time.sleep(2)                                                                               # pauses time for 1 seconds
+    print("You took", color.BOLD + str(guess()) + color.END,"tries to guess my number")         # print text and call guess fucntion
     time.sleep(1)                                                                               # pauses time for 1 seconds
     print("Let's try again...")                                                                 # print text
     time.sleep(2)                                                                               # pauses time for 2 seconds
-    print("You took", color.BOLD + str(guess()) + color.END, "tries to guess my number")        # print text and call guess()
+    print("You took", color.BOLD + str(guess()) + color.END, "tries to guess my number")        # print text and call guess fucntion
     time.sleep(1)                                                                               # pauses time for 1 seconds
     print("End of round 2")                                                                     # print text
     time.sleep(2)                                                                               # pauses time for 2 seconds
-    print("You took", color.BOLD + str(guess()) + color.END, "tries to guess my number")        # print text and call guess()
-main()
+    print("You took", color.BOLD + str(guess()) + color.END, "tries to guess my number")        # print text and call guess function
+    print("Thanks for playing!")                                                                # print text
+    time.sleep(1)                                                                               # pauses time for 1 second
+    print("See you later!")                                                                     # print text
+main()                                                                                          # calls main function
