@@ -40,16 +40,26 @@ def guess():
         if guess == number:
             print("You guessed the number I was thinking about!")
             time.sleep(2)
-            print("My number was: ", color.BOLD + str(number) + color.END)
+            print("My number was:", color.BOLD + str(number) + color.END)
             time.sleep(2)
             return count
+
 def main():
     print("Welcome!")
     time.sleep(1)
     print("This is a guessing game where I think of a number between 1 and 100")
     time.sleep(2)
+    print("There are 3 rounds in this game...")
+    time.sleep(1)
+    print("Then I will give you the average amount of tries to took you to guess my number")
+    time.sleep(1)
     print("You took", color.BOLD + str(guess()) + color.END,"tries to guess my number")
     time.sleep(1)
-    print("Thanks for playing!")
-
+    print("Let's try again...")
+    time.sleep(2)
+    print("You took", color.BOLD + str(guess()) + color.END, "tries to guess my number")
+    time.sleep(1)
+    print("End of round 2")
+    time.sleep(2)
+    print("You took", color.BOLD + str(guess()) + color.END, "tries to guess my number")
 main()
