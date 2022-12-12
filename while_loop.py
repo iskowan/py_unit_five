@@ -17,7 +17,7 @@ while True:
         break
 print("I am out of the loop")
 '''
-
+'''
 import random
 tries = 0
 total = 0
@@ -27,3 +27,4 @@ while total != 12:
     tries += 1                      # same things as tries = tries + 1
     total = die1 + die2
 print("It took", tries, "tries to get a 12")
+'''
