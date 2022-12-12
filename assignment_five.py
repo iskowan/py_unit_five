@@ -65,13 +65,13 @@ def average(num1, num2, num3):
     return new_total                            # returning the new total
 def main():
     scrollTxt("Welcome!\n")
-    time.sleep(1)                                                                                       # pauses time for 1 seconds
-    scrollTxt("This is a guessing game where I think of a number between 1 and 100\n")                  # print text
-    time.sleep(1)                                                                                       # pauses time for 2 seconds
-    scrollTxt("There are 3 rounds in this game\n")                                                      # print text amd places the next line of text next to it                                                                                  # prints "."
-    time.sleep(1)                                                                                       # pauses time for 1 second
-    scrollTxt("Then I will give you the average amount of tries to took you to guess my number\n")      #print text
-    time.sleep(1)                                                                                       # pauses time for 1 seconds
+    time.sleep(1)                                                                                                               # pauses time for 1 seconds
+    scrollTxt("This is a guessing game where I think of a number between 1 and 100\n")                                          # print text
+    time.sleep(1)                                                                                                               # pauses time for 2 seconds
+    scrollTxt("There are 3 rounds in this game\n")                                                                              # print text amd places the next line of text next to it
+    time.sleep(1)                                                                                                               # pauses time for 1 second
+    scrollTxt("Then I will give you the average amount of tries to took you to guess my number\n")                              #print text
+    time.sleep(1)                                                                                                               # pauses time for 1 seconds
     while True:
         scrollTxt("Round 1: \n")
         guess1 = get_guess()                                                                                                    # naming get_guess() as guess1
